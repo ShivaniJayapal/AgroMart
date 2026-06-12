@@ -109,7 +109,7 @@ npm start
 
 ## 👩‍💻 Team
 
-* Shivani Jayapal
+* Shivani J
 * Adepu Shruthi Shankar
 * Gauri Gohad
 
