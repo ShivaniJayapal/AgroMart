@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', sans-serif; /* A more premium, open font */
+}
+
+.auth-container {
+  display: flex;
+  height: 100vh;
+  background-color: #ffffff;
+}
+
+/* LEFT SIDE (Form Area) */
+.auth-left {
+  flex: 0.9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top left, #f0fdf4 0%, #ffffff 50%);
+  padding: 40px;
+}
+
+/* MAIN FORM BOX */
+.form-box {
+  width: 100%;
+  max-width: 420px;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 40px;
+  border-radius: 28px; /* More rounded for a modern feel */
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px); /* Glassmorphism effect */
+  animation: slideUp 0.6s ease-out;
+}
+
+/* TOGGLE BUTTONS */
+.toggle-buttons {
+  display: flex;
+  margin-bottom: 30px;
+  background: #f1f5f9;
+  padding: 6px;
+  border-radius: 16px;
+  position: relative;
+}
+
+.toggle-buttons button {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+}
+
+.toggle-active {
+  background: #16a34a; /* Vibrant Emerald Green */
+  color: white;
+  box-shadow: 0 4px 12px rgba(22, 163, 74, 0.25);
+}
+
+.toggle-inactive {
+  background: transparent;
+  color: #64748b;
+}
+
+.toggle-inactive:hover {
+  color: #16a34a;
+}
+
+/* FORM FIELDS (General for inputs used here) */
+.form-content input {
+  width: 100%;
+  padding: 14px 18px;
+  margin-bottom: 20px;
+  border-radius: 14px;
+  border: 1.5px solid #e2e8f0;
+  background: #f8fafc;
+  transition: all 0.2s;
+}
+
+.form-content input:focus {
+  outline: none;
+  border-color: #16a34a;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(22, 163, 74, 0.1);
+}
+
+/* RIGHT SIDE (Image) */
+.auth-right {
+  flex: 1.1;
+  padding: 20px; /* Adds a "frame" look around the image */
+}
+
+.auth-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30px; /* Rounded image looks more professional */
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+}
+
+/* ANIMATIONS */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .auth-right { display: none; }
+  .auth-left { flex: 1; }
+}
